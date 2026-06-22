@@ -1,5 +1,7 @@
 import React from "react";
-import { Github, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import Github from "lucide-react/icons/github";
+
 import "./Projects.css";
 
 const projects = [
