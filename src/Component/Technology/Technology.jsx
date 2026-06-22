@@ -10,7 +10,7 @@ import MongoDB from "../../assets/Icons/MongoDB.png";
 import Git from "../../assets/Icons/Git.png";
 import GitHub from "../../assets/Icons/GitHub.png";
 import Postman from "../../assets/Icons/PostMan.png";
-import ExpressJS from "../../assets/Icons/ExpressJS.png"
+import ExpressJS from "../../assets/Icons/ExpressJs.png"
 const technologies = [
   { name: "HTML", icon: <img src={Html} alt="HTML" /> },
   { name: "CSS", icon: <img src={css} alt="CSS" /> },
