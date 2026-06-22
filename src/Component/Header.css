@@ -1,0 +1,157 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
+background: linear-gradient(135deg, #000000 0%, #0E1A2D 50%, #1E3A5F 100%);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 40px;
+}
+
+
+.image img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.about-me h1 {
+  font-weight: 700;
+  font-size: 2.6rem;
+  max-width: 900px;
+  line-height: 1.5;  
+  margin: 0 auto 20px auto;
+  text-align: center;
+  color: white;
+}
+
+.about-me p {
+  font-size: 1.1rem;
+  max-width: 690px;
+  line-height: 1.7;        
+  color: #b0b8c1;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 400;
+}
+
+
+
+@media (max-width: 600px) {
+  .header {
+    padding: 20px;
+  }
+  .about-me h1 {
+    font-size: 1.4rem;
+  }
+  .image img {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+
+.about-me h1 span {
+  background: linear-gradient(270deg, #007BFF, #00CFFF, #b3008c);
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 8s ease infinite;
+  font-weight: 700;
+  display: inline-block;
+}
+
+/* Keep the gradientShift keyframes from button */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.header-button {
+display: flex;
+justify-content: space-around;
+gap:40px;
+margin-top: 15px;
+}
+.button1 button , .button2 button{
+  border-radius: 50px;
+  height: 60px;
+  width: 190px;
+  border: none;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(270deg, #007BFF, #00CFFF, #b3008c);
+  background-size: 600% 600%;
+  animation: gradientShift 8s ease infinite;
+  transition: color 0.3s ease;
+  font-family: poppins;
+ 
+}
+.about-me h1,
+.about-me p {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Delay paragraph so it appears after heading */
+.about-me p {
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.button1 button,
+.button2 button {
+  border-radius: 50px;
+  height: 60px;
+  width: 190px;
+  border: none;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(270deg, #007BFF, #00CFFF, #b3008c);
+  background-size: 600% 600%;
+  animation: gradientShift 8s ease infinite, fadeInUp 1s ease forwards;
+  transition: color 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Make second button fade slightly later */
+.button2 button {
+  animation-delay: 0.3s, 0.3s; /* First value is for gradientShift, second for fadeInUp */
+}
+
+/* Same fadeInUp as text */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

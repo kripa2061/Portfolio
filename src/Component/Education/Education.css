@@ -1,0 +1,53 @@
+.education {
+  padding: 80px 20px;
+  background: #0f172a;
+  color: white;
+    font-family: "Poppins", sans-serif;
+  
+}
+
+.education h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+ background: linear-gradient(90deg, #c084fc, #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+}
+
+.education-container {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.edu-card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.edu-card:hover {
+  transform: translateY(-5px);
+  background: #334155;
+}
+
+.edu-card h3 {
+  color: #38bdf8;
+  margin-bottom: 5px;
+}
+
+.school {
+  color: #cbd5e1;
+  font-weight: 500;
+}
+
+.year {
+  color: #94a3b8;
+  margin-bottom: 10px;
+}

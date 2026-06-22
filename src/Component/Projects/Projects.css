@@ -1,0 +1,113 @@
+.projects {
+  padding: 80px 10%;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+.projects h2 {
+  font-size: 2.6rem;
+  margin-bottom: 12px;
+  background: linear-gradient(90deg, #c084fc, #818cf8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.projects > p {
+  margin-bottom: 50px;
+  color: #a1a1aa;
+  font-size: 1.05rem;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 28px;
+  border-radius: 18px;
+  border: 1px solid rgba(124, 58, 237, 0.4);
+  background: linear-gradient(180deg, rgba(124, 58, 237, 0.06), rgba(0, 0, 0, 0));
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: #a855f7;
+  box-shadow: 0 10px 30px rgba(168, 85, 247, 0.25);
+}
+
+.project-card h3 {
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+}
+
+.project-card p {
+  color: #d4d4d8;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.tech-badge {
+  font-size: 0.78rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(192, 132, 252, 0.12);
+  color: #c084fc;
+  border: 1px solid rgba(192, 132, 252, 0.3);
+}
+
+.project-buttons {
+  margin-top: 24px;
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.btn-outline {
+  border: 1px solid #7c3aed;
+  color: #fff;
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: rgba(124, 58, 237, 0.15);
+}
+
+.btn-filled {
+  background: linear-gradient(90deg, #7c3aed, #a855f7);
+  color: #fff;
+  border: none;
+}
+
+.btn-filled:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
