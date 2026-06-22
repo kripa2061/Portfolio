@@ -1,43 +1,53 @@
-import React, { useState } from 'react'
-import './Navbar.css'
-import { FaBars } from 'react-icons/fa'
+import React, { useState } from "react";
+import "./Navbar.css";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
-  const [navbar, setNavbar] = useState("home")
-  const [menuOpen, setMenuOpen] = useState(false)
-
-  const handleClick = (value) => {
-    setNavbar(value)
-    setMenuOpen(false) // close menu after click (mobile)
-  }
+  const [active, setActive] = useState("home");
+  const [open, setOpen] = useState(false);
 
   return (
-    <div className="container">
-      <div className="name">
-        <h2>Kripa.</h2>
+    <>
+      <div className="container">
+
+        <div className="name">
+          <h2>Kripa.</h2>
+        </div>
+
+        {/* DESKTOP NAV */}
+        <div className="nav-desktop">
+          <a className={active === "home" ? "active" : ""} href="#home" onClick={() => setActive("home")}>Home</a>
+          <a className={active === "about" ? "active" : ""} href="#about" onClick={() => setActive("about")}>About</a>
+          <a className={active === "projects" ? "active" : ""} href="#projects" onClick={() => setActive("projects")}>Projects</a>
+          <a className={active === "contact" ? "active" : ""} href="#contact" onClick={() => setActive("contact")}>Contact</a>
+          <a className={active === "education" ? "active" : ""} href="#education" onClick={() => setActive("education")}>Education</a>
+        </div>
+
+        <div className="contact-button">
+          <a href="#contact"><button>Connect with me</button></a>
+        </div>
+
+        {/* HAMBURGER */}
+        <div className="hamburger" onClick={() => setOpen(true)}>
+          <FaBars />
+        </div>
       </div>
 
-      {/* hamburger icon */}
-      <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
-        <FaBars />
-      </div>
+      {/* OVERLAY */}
+      <div className={`overlay ${open ? "show" : ""}`} onClick={() => setOpen(false)} />
 
-      {/* nav links */}
-      <div className={`navbar ${menuOpen ? "open" : ""}`}>
-        <ul>
-          <a href="#home"><li onClick={() => handleClick("home")} className={navbar === "home" ? "active" : ""}>Home</li></a>
-          <a href="#about"><li onClick={() => handleClick("about")} className={navbar === "about" ? "active" : ""}>About</li></a>
-          <a href="#projects"><li onClick={() => handleClick("projects")} className={navbar === "projects" ? "active" : ""}>Projects</li></a>
-          <a href="#contact"><li onClick={() => handleClick("contact")} className={navbar === "contact" ? "active" : ""}>Contact</li></a>
-          <a href="#education"><li onClick={() => handleClick("education")} className={navbar === "education" ? "active" : ""}>Education</li></a>
-        </ul>
-      </div>
+      {/* MOBILE DRAWER */}
+      <div className={`mobile-menu ${open ? "open" : ""}`}>
+        <FaTimes className="close" onClick={() => setOpen(false)} />
 
-      <div className="contact-button">
-        <a href="#contact"><button>Connect with me</button></a>
+        <a href="#home" onClick={() => { setActive("home"); setOpen(false); }}>Home</a>
+        <a href="#about" onClick={() => { setActive("about"); setOpen(false); }}>About</a>
+        <a href="#projects" onClick={() => { setActive("projects"); setOpen(false); }}>Projects</a>
+        <a href="#contact" onClick={() => { setActive("contact"); setOpen(false); }}>Contact</a>
+        <a href="#education" onClick={() => { setActive("education"); setOpen(false); }}>Education</a>
       </div>
-    </div>
-  )
-}
+    </>
+  );
+};
 
-export default Navbar
+export default Navbar;
