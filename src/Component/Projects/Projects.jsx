@@ -1,6 +1,5 @@
 import React from "react";
-import { ExternalLink } from "lucide-react";
-import Github from "lucide-react/icons/github";
+
 
 import "./Projects.css";
 
@@ -60,7 +59,7 @@ const Projects = () => {
                 rel="noopener noreferrer"
                 className="btn btn-outline"
               >
-                <Github size={16} /> GitHub
+              GitHub
               </a>
 
               <a
@@ -69,7 +68,7 @@ const Projects = () => {
                 rel="noopener noreferrer"
                 className="btn btn-filled"
               >
-                <ExternalLink size={16} /> Live Demo
+      Live Demo
               </a>
             </div>
           </div>
