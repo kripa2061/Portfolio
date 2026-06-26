@@ -23,6 +23,7 @@ const projects = [
       "A food ordering platform that allows users to explore menus, place orders, and manage their cart seamlessly.",
     tech: ["React", "Node.js", "MongoDB"],
     github: "https://github.com/kripa2061/Food-Ordering",
+    demo:"https://food-ordering-9ij3.onrender.com/"
   },
 ];
 
